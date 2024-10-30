@@ -1,0 +1,66 @@
+--[[
+    SUYSBSPhub - Painel de Controle
+    Este script fornece um painel de controle com duas funcionalidades:
+    1. Espectar Players - Visualizar a tela de outros jogadores.
+    2. ESP Players - Exibir marcações e nicks dos jogadores ao redor.
+    
+    Aviso: Use este script apenas em jogos onde você tenha permissão.
+--]]
+
+-- Criação do Painel UI
+local UserInterface = Instance.new("ScreenGui")
+UserInterface.Name = "SUYSBSPhub"
+UserInterface.Parent = game.CoreGui
+
+-- Título do Painel
+local TitleLabel = Instance.new("TextLabel")
+TitleLabel.Text = "SUYSBSPhub"
+TitleLabel.Size = UDim2.new(0, 300, 0, 50)
+TitleLabel.Position = UDim2.new(0.5, -150, 0.2, -100)
+TitleLabel.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+TitleLabel.TextColor3 = Color3.new(1, 1, 1)
+TitleLabel.Font = Enum.Font.SourceSansBold
+TitleLabel.TextSize = 24
+TitleLabel.Parent = UserInterface
+
+-- Botão Espectar Players
+local SpectateButton = Instance.new("TextButton")
+SpectateButton.Name = "SpectateButton"
+SpectateButton.Text = "Espectar Players"
+SpectateButton.Size = UDim2.new(0, 300, 0, 50)
+SpectateButton.Position = UDim2.new(0.5, -150, 0.2, -40)
+SpectateButton.BackgroundColor3 = Color3.new(0.2, 0.6, 0.8)
+SpectateButton.TextColor3 = Color3.new(1, 1, 1)
+SpectateButton.Font = Enum.Font.SourceSansBold
+SpectateButton.TextSize = 20
+SpectateButton.Parent = UserInterface
+
+-- Botão ESP Players
+local ESPButton = Instance.new("TextButton")
+ESPButton.Name = "ESPButton"
+ESPButton.Text = "ESP Players"
+ESPButton.Size = UDim2.new(0, 300, 0, 50)
+ESPButton.Position = UDim2.new(0.5, -150, 0.2, 20)
+ESPButton.BackgroundColor3 = Color3.new(0.4, 0.8, 0.4)
+ESPButton.TextColor3 = Color3.new(1, 1, 1)
+ESPButton.Font = Enum.Font.SourceSansBold
+ESPButton.TextSize = 20
+ESPButton.Parent = UserInterface
+
+-- Função para Espectar Players
+SpectateButton.MouseButton1Click:Connect(function()
+    -- Lógica para ativar a visualização da tela de outro jogador
+    print("Espectar Players ativado")
+    -- Implementar código de espectar players aqui
+end)
+
+-- Função para ESP Players
+ESPButton.MouseButton1Click:Connect(function()
+    -- Lógica para exibir marcações e nomes dos jogadores
+    print("ESP Players ativado")
+    -- Implementar código ESP aqui
+end)
+
+-- Instruções:
+-- Clique em "Espectar Players" para ver a tela de outro jogador.
+-- Clique em "ESP Players" para visualizar a marcação e o nome dos jogadores ao redor.
